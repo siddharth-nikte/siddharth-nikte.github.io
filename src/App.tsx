@@ -30,10 +30,10 @@ interface SkillItemPro {
   itemIcon: string[];
 }
 
-const SkillItems: React.FC<SkillItemPro> = ({ fieldName, itemName, itemIcon }) => {
+const SkillItems: React.FC<SkillItemPro> = ({ fieldName, itemName, itemIcon}) => {
   return (
     <Grid size={3}>
-      <Typography marginTop={2} variant='h6' fontWeight={900}>{fieldName}</Typography>
+      <Typography marginTop={2} variant='h5' fontWeight={900}>{fieldName}</Typography>
       <Box marginLeft={6}>
         <nav aria-label={fieldName}>
           <List>
@@ -93,7 +93,7 @@ const CustomCard: React.FC<CardProps> = ({ imageSrc, name, description, iconSrc,
                 <img key={index} src={src} alt={`icon-${index}`} height={30} width={30} />
               ))}
             </Grid>
-            <Typography variant="body2" sx={{ color: 'grey' }}>
+            <Typography variant="body1" sx={{ color: 'grey' }}>
               {description}
             </Typography>
           </CardContent>
@@ -120,7 +120,7 @@ const BlinkingText = styled(Typography)(() => ({
 }));
 
 function App() {
-  const isMobile = useMediaQuery('(max-width:600px)');
+  const isMobile = useMediaQuery('(max-width:1000px)');
   return (
     <ThemeProvider theme={theme}>
       <Stack spacing={2}>
@@ -156,7 +156,7 @@ function App() {
         {!isMobile && <Stack direction='row' spacing={2} justifyContent={'center'} alignContent={'center'}>
           <SkillSection />
         </Stack>}
-        {isMobile && <SkillSection />}
+        {isMobile && <SkillSection/>}
 
         {/* Experience */}
         <Divider component="li" />
@@ -171,7 +171,7 @@ function App() {
         <Divider component="li" />
         <Grid container spacing={4} justifyContent={'center'}>
           <Grid size={12}>
-            <Typography marginX={2} variant='h4' fontWeight={900} color='#ecb366'>Projects</Typography>
+            <Typography marginX={2} variant='h4' fontWeight={900} color='#ecb366'> Projects</Typography>
           </Grid>
           <CustomCard imageSrc={HE} name='AudioAid' description='An audio processing android app designed for individuals with hearing difficulties' iconSrc={[Java, Cplus]} link='https://www.amazon.com/dp/B0DK9M6Q2Y/ref=apps_sf_sta' />
           <CustomCard imageSrc={StrikeSS} name='Strike' description='A Website for Content based recommendation system and classifier for websites' iconSrc={[Re, Mui, NodeJS, Python]} link='https://github.com/siddharth-nikte/Strike' />
