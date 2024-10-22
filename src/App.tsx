@@ -127,7 +127,7 @@ function App() {
 
         <Grid container spacing={2} alignItems={'center'}>
           <Grid size={12} marginTop={32}>
-            <Typography variant='h4' color='#ecb366'>Siddharth Nikte, resume link pdf</Typography>
+            <Typography variant='h4' color='#ecb366'>Siddharth Nikte</Typography>
             <BlinkingText variant='h6' color='#c9ebe2'>FullStack Developer | Mobile Developer</BlinkingText>
           </Grid>
           <Grid size={12} marginBottom={30}>
